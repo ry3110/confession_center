@@ -1,0 +1,11 @@
+<%- include("./partials/header") %>
+<form action="/msg" method="POST">
+    <%allmsg.forEach(element => {%>
+       <% if(currentUser==element.recId){%>
+        <p><%= element.sender %> </p>
+        <p><%=element.msg%></p>
+    <%}});%>
+
+
+</form>
+<%- include("./partials/footer") %> 

@@ -1,0 +1,29 @@
+<%- include("./partials/header") %> <% if(success ===true) {%>
+<div class="alert alert-success" id="success-alert" role="alert">
+  Message Successfully Sent.
+</div>
+<% }%>
+
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label"
+    >Tell <b><%= friendName %></b> about your feeling</label
+  >
+
+  <form
+    method="POST"
+    id="form"
+    action="http://localhost:3000/friends/<%=friendId%>"
+  >
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      cols="10"
+      name="describe"
+    ></textarea>
+    <br />
+    <button>submit</button>
+  </form>
+</div>
+
+<%- include("./partials/footer") %>

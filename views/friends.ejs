@@ -1,0 +1,12 @@
+<%- include("./partials/header") %>
+<h1>See all friends who has registered</h1>
+<hr />
+<%users.forEach(element => {%> <% if(element.name){ %>
+<a href="http://localhost:3000/friends/<%=element._id%>">
+  <h3><%=element.name%></h3></a
+>
+
+<p><%=element.email%></p>
+<hr />
+
+<% }%> <%});%> <%- include("./partials/footer") %>
